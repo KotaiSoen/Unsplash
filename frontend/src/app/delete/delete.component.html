@@ -1,0 +1,8 @@
+<p class="dialog-title">Are you sure?</p>
+<div mat-dialog-actions class="buttons">
+    <div class="buttons-div">
+        <button mat-button mat-dialog-close class="cancel">Cancel</button>
+        <button mat-button [mat-dialog-close]="data._id" cdkFocusInitial class="delete" (click)="deleteImage(data._id)">Delete</button>   
+    </div>
+        
+</div>

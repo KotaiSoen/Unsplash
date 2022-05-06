@@ -1,0 +1,21 @@
+<div class="main-box">
+  <div class="nav">
+    <div class="first-nav">
+      <img src="../assets/my_unsplash_logo.svg" class="brand-image">
+      <div class="search nav-item">
+        <mat-icon>search</mat-icon>
+        <input type="text" placeholder="Search by name">
+      </div>
+    </div>
+    <div class="second-nav nav-item">
+      <button class="add-photo" mat-raised-button (click)="openDialog()">Add a photo</button>
+    </div>
+  </div>
+  <ngx-masonry [options]="{ gutter: 35 }" style="width: 91.5vw;" [ordered]="true">
+    <div ngxMasonryItem class="masonry-item" [prepend]="true"  *ngFor="let image of masonryItems">
+      <img src="{{image.url}}" width="100%" class="image">
+      <button class="delete-button" mat-raised-button (click)="openAnotherDialog(image._id)">delete</button>
+      <div class="label">{{image.label}}</div>
+    </div>
+  </ngx-masonry>
+</div>

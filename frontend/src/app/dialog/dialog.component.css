@@ -1,0 +1,59 @@
+.dialog-title {
+    width: 150px;
+    height: 33px;
+
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+    /* identical to box height */
+
+
+    color: #333333;
+
+}
+
+mat-form-field {
+    display: flex;
+
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.submit {
+    width: 80px;
+    height: 30px;
+
+
+    background: #3DB46D;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: none;
+
+    font-family: 'Noto Sans';
+    font-size: 12px;
+    line-height: 22px;
+    
+    color: #FFFFFF;
+}
+
+.cancel {
+    color: #BDBDBD;
+    font-family: 'Noto Sans';
+    border: none;
+    background-color: white;
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.buttons-div {
+    padding-bottom: 15px;
+    padding-right: 5px;
+}

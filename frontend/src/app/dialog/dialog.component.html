@@ -1,0 +1,19 @@
+<div class="dialog-box">
+    <p class="dialog-title">Add a new photo</p>
+    <div mat-dialog-content>
+        <mat-form-field appearance="fill">
+            <mat-label>Label</mat-label>
+            <input matInput [(ngModel)]="data.label">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Photo Url</mat-label>
+            <input matInput [(ngModel)]="data.url">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions class="buttons">
+        <div class="buttons-div">
+            <button mat-button mat-dialog-close class="cancel">Cancel</button>
+            <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="submit">Submit</button>
+        </div>
+    </div>
+</div>
