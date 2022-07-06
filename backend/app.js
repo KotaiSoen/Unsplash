@@ -5,6 +5,10 @@ const cors = require('cors');
 //the mongoDB config file
 require('./db/mongoose');
 
+//dist folder
+var distDir = __dirname + "/dist";
+app.use(express.static(distDir));
+
 //the image route config file
 const imageRoute = require('./routes/image');
 
@@ -21,7 +25,7 @@ app.use(cors({
 app.use('/images', imageRoute);
 
 //server connection 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);

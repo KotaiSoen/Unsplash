@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "https://kotai-unsplash-api.heroku.com/images",
+      "secure": false
+    }
+}

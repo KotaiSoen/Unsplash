@@ -6,7 +6,7 @@ import { Image } from 'src/models/image';
   providedIn: 'root'
 })
 export class WebRequestService {
-  IMAGE_URL = 'http://localhost:3000'
+  IMAGE_URL = 'https://kotai-unsplash-api.heroku.com'
 
   constructor(private httpClient: HttpClient) { }
 
