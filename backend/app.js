@@ -16,10 +16,14 @@ const imageRoute = require('./routes/image');
 app.use(express.json());
 
 //cors middleware
-app.use(cors({
-    origin: "*",
-    optionsSuccessStatus: 200,
-}));
+app.use(function (req, res, next) {
+    res.header('credentials', 'include');
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header("Access-Control-Allow-Origin", '*');
+    res.header("Access-Control-Allow-Methods", "GET, POST, HEAD, OPTIONS, PUT, PATCH, DELETE");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    next();
+});
 
 //route middleware
 app.use('/images', imageRoute);
